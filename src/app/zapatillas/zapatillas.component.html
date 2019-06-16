@@ -1,0 +1,8 @@
+<h2>{{titulo}}</h2>
+<ul>
+	<li *ngFor="let zapatilla of zapatillas">
+	{{zapatilla.nombre}} - ${{zapatilla.precio}}
+	<span *ngIf="zapatilla.precio <= 10" 
+		   [ngStyle]="{'background': 'green', color: 'white'}">¡EN OFERTA!</span>
+	</li>
+</ul>
